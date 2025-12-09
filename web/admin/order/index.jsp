@@ -36,7 +36,7 @@
                         </div>
                         <c:remove var="error" scope="session" />
                     </c:if>
-                    
+
                     <!-- Header -->
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
                         <div class="d-flex align-items-center gap-3">
@@ -149,11 +149,11 @@
         </style>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-            function confirmDelete(orderId) {
-                if (confirm('Are you sure you want to delete this order?')) {
-                    window.location.href = '${pageContext.request.contextPath}/admin/order/delete?id=' + orderId;
-                }
-            }
+                                                            function confirmDelete(orderId) {
+                                                                if (confirm('Are you sure you want to delete this order?')) {
+                                                                    window.location.href = '${pageContext.request.contextPath}/admin/order/delete?id=' + orderId;
+                                                                }
+                                                            }
         </script>
     </body>
 </html>

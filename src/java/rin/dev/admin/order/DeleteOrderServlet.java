@@ -1,9 +1,9 @@
 package rin.dev.admin.order;
 
-import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import rin.dev.admin.BaseAdminServlet;
 import rin.dev.data.dao.DatabaseDao;
 import rin.dev.data.dao.OrderDao;
@@ -33,4 +33,3 @@ public class DeleteOrderServlet extends BaseAdminServlet {
         doGet(request, response);
     }
 }
-    
