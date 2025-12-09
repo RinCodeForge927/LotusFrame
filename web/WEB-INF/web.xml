@@ -336,6 +336,16 @@
         <servlet-name>EditOrderServlet</servlet-name>
         <url-pattern>/admin/order/edit</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteOrderServlet</servlet-name>
+        <servlet-class>rin.dev.admin.order.DeleteOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteOrderServlet</servlet-name>
+        <url-pattern>/admin/order/delete</url-pattern>
+    </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>IndexOrderItemServlet</servlet-name>
         <url-pattern>/IndexOrderItemServlet</url-pattern>

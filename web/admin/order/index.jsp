@@ -21,6 +21,22 @@
         <div class="wrapper">
             <main class="main">
                 <div class="content p-4">
+                    <!-- Notification messages -->
+                    <c:if test="${not empty sessionScope.success}">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success!</strong> ${sessionScope.success}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <c:remove var="success" scope="session" />
+                    </c:if>
+                    <c:if test="${not empty sessionScope.error}">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error!</strong> ${sessionScope.error}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <c:remove var="error" scope="session" />
+                    </c:if>
+                    
                     <!-- Header -->
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
                         <div class="d-flex align-items-center gap-3">
@@ -96,6 +112,10 @@
                                                            class="btn btn-outline-primary btn-sm" title="Edit">
                                                             <i class="bi bi-pencil-square"></i>
                                                         </a>
+                                                        <a href="javascript:void(0);" onclick="confirmDelete(${order.id})"
+                                                           class="btn btn-outline-danger btn-sm" title="Delete">
+                                                            <i class="bi bi-trash"></i>
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -128,5 +148,12 @@
 
         </style>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function confirmDelete(orderId) {
+                if (confirm('Are you sure you want to delete this order?')) {
+                    window.location.href = '${pageContext.request.contextPath}/admin/order/delete?id=' + orderId;
+                }
+            }
+        </script>
     </body>
 </html>

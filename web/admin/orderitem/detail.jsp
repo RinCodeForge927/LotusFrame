@@ -92,6 +92,7 @@
                                                 <th>Quantity</th>
                                                 <th>Unit Price</th>
                                                 <th>Subtotal</th>
+                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -109,12 +110,17 @@
                                                     <td class="fw-bold text-success">
                                                         <fmt:formatNumber value="${item.price * item.quantity}" type="currency" currencySymbol="$"/>
                                                     </td>
+                                                    <td>
+                                                        <button class="btn btn-outline-danger btn-sm" disabled data-bs-toggle="tooltip" data-bs-placement="top" title="Deleting an order item is not allowed. You can delete the entire order instead.">
+                                                            <i class="bi bi-trash"></i>
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </c:forEach>
                                         </tbody>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <td colspan="4" class="text-end fw-bold fs-5">Grand Total:</td>
+                                                <td colspan="5" class="text-end fw-bold fs-5">Grand Total:</td>
                                                 <td class="fw-bold text-success fs-4">
                                                     <fmt:formatNumber value="${order.totalPrice}" type="currency" currencySymbol="$"/>
                                                 </td>
@@ -143,5 +149,11 @@
             </style>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                })
+            </script>
         </body>
     </html>
