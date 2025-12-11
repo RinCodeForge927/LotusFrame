@@ -87,7 +87,7 @@
                         <a href="#" class="list-group-item">
                             <div class="row g-0 align-items-center">
                                 <div class="col-2">
-                                    <img src="./assets/admin/src/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                                    <img src="./assets/admin/static/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
                                 </div>
                                 <div class="col-10 ps-2">
                                     <div class="text-dark">Vanessa Tucker</div>
@@ -99,7 +99,7 @@
                         <a href="#" class="list-group-item">
                             <div class="row g-0 align-items-center">
                                 <div class="col-2">
-                                    <img src="./assets/admin/src/img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+                                    <img src="./assets/admin/static/img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
                                 </div>
                                 <div class="col-10 ps-2">
                                     <div class="text-dark">William Harris</div>
@@ -111,7 +111,7 @@
                         <a href="#" class="list-group-item">
                             <div class="row g-0 align-items-center">
                                 <div class="col-2">
-                                    <img src="./assets/admin/src/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                                    <img src="./assets/admin/static/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
                                 </div>
                                 <div class="col-10 ps-2">
                                     <div class="text-dark">Christina Mason</div>
@@ -123,7 +123,7 @@
                         <a href="#" class="list-group-item">
                             <div class="row g-0 align-items-center">
                                 <div class="col-2">
-                                    <img src="./assets/admin/src/img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                                    <img src="./assets/admin/static/img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
                                 </div>
                                 <div class="col-10 ps-2">
                                     <div class="text-dark">Sharon Lessman</div>
@@ -144,7 +144,7 @@
                     <i class="align-middle" data-feather="settings"></i>
                 </a>
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                    <img src="./assets/admin/src/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="User" />
+                    <img src="./assets/admin/static/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="User" />
                     <span class="text-dark">
                         <c:choose>
                             <c:when test="${sessionScope.user != null && sessionScope.user.fullName != null}">
